@@ -6,6 +6,14 @@ Built with **HTML5**, **Bootstrap 5.3**, and modern **vanilla JavaScript**. Zero
 
 ---
 
+## 🌐 Live Website & Repository Links
+
+- **Live Website (GitHub Pages):** [https://vijay11-08.github.io/html_website/](https://vijay11-08.github.io/html_website/)
+- **GitHub Repository:** [https://github.com/Vijay11-08/html_website](https://github.com/Vijay11-08/html_website)
+- **Author:** [vijay11-08](https://github.com/Vijay11-08) (`vijayotaradi118@gmail.com`)
+
+---
+
 ## 🌟 Key Features
 
 1. **Exhaustive HTML Tag Encyclopedia (`tags.html`)**:
