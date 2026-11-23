@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Cheat Sheet & Starter Templates | HTMLVerse</title>
+  <meta name="description" content="Quick reference guide for HTML tags, global attributes, and copy-paste production starter templates.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-4">🚀</span>
+        <span class="brand-gradient fs-4">HTMLVerse</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="index.html"><i class="bi bi-house me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="tags.html"><i class="bi bi-tags me-1"></i> Tag Encyclopedia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="tutorial.html"><i class="bi bi-book me-1"></i> Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="playground.html"><i class="bi bi-play-circle me-1"></i> Live Playground</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" href="cheatsheet.html"><i class="bi bi-card-checklist me-1"></i> Cheat Sheet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="quiz.html"><i class="bi bi-patch-question me-1"></i> Quiz</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-secondary border-0" id="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+          </button>
+          <a href="playground.html" class="btn btn-primary d-none d-sm-inline-flex align-items-center gap-2">
+            <span>Playground</span>
+            <i class="bi bi-code-slash"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="py-5 bg-body-tertiary border-bottom text-center">
+    <div class="container">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill mb-2 fw-semibold">Quick Reference Matrix</span>
+      <h1 class="fw-bold mb-2">HTML5 Cheat Sheet & Templates</h1>
+      <p class="text-secondary max-w-700 mx-auto">
+        A fast desk reference of global HTML attributes, core tag categories, and 1-click copy starter templates.
+      </p>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    
+    <!-- Section 1: Global Attributes -->
+    <section class="mb-5">
+      <h3 class="fw-bold text-primary mb-3"><i class="bi bi-sliders me-2"></i> Standard Global Attributes</h3>
+      <p class="text-secondary">Global attributes can be specified on almost <strong>any</strong> HTML element:</p>
+      
+      <div class="table-responsive shadow-sm rounded">
+        <table class="table table-bordered table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th style="width: 20%;">Attribute</th>
+              <th style="width: 25%;">Example</th>
+              <th>Description & Functionality</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="fw-bold text-primary">id</code></td>
+              <td><code>id="main-nav"</code></td>
+              <td>Unique document-wide identifier, used for CSS targeting, JS DOM hooks, and fragment anchors.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">class</code></td>
+              <td><code>class="btn btn-primary"</code></td>
+              <td>Space-separated list of CSS styling classes applied to the element.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">title</code></td>
+              <td><code>title="More information"</code></td>
+              <td>Advisory tooltip text shown when hovering over the element on desktop browsers.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">data-*</code></td>
+              <td><code>data-user-id="42"</code></td>
+              <td>Custom data attributes for embedding private JavaScript application state.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">hidden</code></td>
+              <td><code>&lt;div hidden&gt;</code></td>
+              <td>Boolean attribute that prevents the element from being rendered in the browser.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">tabindex</code></td>
+              <td><code>tabindex="0"</code></td>
+              <td>Controls keyboard navigation focus order (<code>0</code> for normal tab flow, <code>-1</code> for programmatic focus).</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">contenteditable</code></td>
+              <td><code>contenteditable="true"</code></td>
+              <td>Specifies whether the element's inner text is editable by the user.</td>
+            </tr>
+            <tr>
+              <td><code class="fw-bold text-primary">spellcheck</code></td>
+              <td><code>spellcheck="true"</code></td>
+              <td>Enables or disables the browser's built-in spellchecker on inputs and text blocks.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Production Starter Templates -->
+    <section class="mb-5">
+      <h3 class="fw-bold text-primary mb-4"><i class="bi bi-file-earmark-code me-2"></i> Ready-to-Use Boilerplate Templates</h3>
+
+      <!-- Template 1 -->
+      <div class="card custom-card shadow-sm mb-4">
+        <div class="card-header bg-body-tertiary d-flex justify-content-between align-items-center py-2 px-3">
+          <span class="fw-bold"><i class="bi bi-file-earmark-text me-1"></i> Production HTML5 Starter Skeleton (SEO & OpenGraph Ready)</span>
+          <button class="btn btn-sm btn-outline-primary copy-btn-custom" onclick="copyToClipboard(document.getElementById('template-seo').innerText, this)">
+            <i class="bi bi-clipboard"></i> Copy Template
+          </button>
+        </div>
+        <div class="card-body p-0">
+          <div class="code-container m-0 border-0 rounded-0">
+            <pre><code id="template-seo">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title | Brand Name&lt;/title&gt;
+  &lt;meta name="description" content="Brief description of the webpage under 160 characters for search engines."&gt;
+  &lt;meta name="author" content="Your Name"&gt;
+
+  &lt;!-- OpenGraph / Social Media Metadata --&gt;
+  &lt;meta property="og:title" content="Page Title | Brand Name"&gt;
+  &lt;meta property="og:description" content="Brief summary for social link previews."&gt;
+  &lt;meta property="og:image" content="https://example.com/social-card.jpg"&gt;
+  &lt;meta property="og:type" content="website"&gt;
+
+  &lt;!-- Favicon & Stylesheet --&gt;
+  &lt;link rel="icon" type="image/svg+xml" href="/favicon.svg"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;h1&gt;Main Page Heading&lt;/h1&gt;
+    &lt;p&gt;Content begins here.&lt;/p&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 Company Name. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="card custom-card shadow-sm mb-4">
+        <div class="card-header bg-body-tertiary d-flex justify-content-between align-items-center py-2 px-3">
+          <span class="fw-bold"><i class="bi bi-ui-checks me-1"></i> Accessible Contact Form Template</span>
+          <button class="btn btn-sm btn-outline-primary copy-btn-custom" onclick="copyToClipboard(document.getElementById('template-form').innerText, this)">
+            <i class="bi bi-clipboard"></i> Copy Template
+          </button>
+        </div>
+        <div class="card-body p-0">
+          <div class="code-container m-0 border-0 rounded-0">
+            <pre><code id="template-form">&lt;form action="/api/contact" method="POST" class="contact-form"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Send Us a Message&lt;/legend&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="user-name"&gt;Your Full Name:&lt;/label&gt;
+      &lt;input type="text" id="user-name" name="name" required placeholder="Jane Doe" autocomplete="name"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="user-email"&gt;Email Address:&lt;/label&gt;
+      &lt;input type="email" id="user-email" name="email" required placeholder="jane@example.com" autocomplete="email"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="user-subject"&gt;Inquiry Subject:&lt;/label&gt;
+      &lt;select id="user-subject" name="subject" required&gt;
+        &lt;option value="" disabled selected&gt;Select a category...&lt;/option&gt;
+        &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+        &lt;option value="support"&gt;Technical Support&lt;/option&gt;
+        &lt;option value="sales"&gt;Sales &amp; Enterprise&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="user-msg"&gt;Message:&lt;/label&gt;
+      &lt;textarea id="user-msg" name="message" rows="5" required placeholder="How can we help?"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;button type="submit"&gt;Submit Message&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-body border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center small text-secondary">
+      <div>
+        <strong>HTMLVerse</strong> &bull; HTML5 Cheat Sheet &bull; &copy; 2026
+      </div>
+      <div>
+        <a href="tags.html" class="text-decoration-none text-secondary me-3">Tag Dictionary</a>
+        <a href="playground.html" class="text-decoration-none text-secondary me-3">Playground</a>
+        <a href="quiz.html" class="text-decoration-none text-secondary">Quiz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button type="button" class="btn btn-primary" id="btn-back-to-top" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Global Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
