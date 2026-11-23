@@ -23,7 +23,7 @@
         <span class="brand-gradient fs-4">HTMLVerse</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -67,21 +67,48 @@
     <div class="container">
       <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill mb-2 fw-semibold">Structured Curriculum</span>
       <h1 class="fw-bold mb-2">Modern HTML5 Complete Guide</h1>
-      <p class="text-secondary max-w-700 mx-auto">
+      <p class="text-secondary max-w-700 mx-auto mb-3">
         Learn how HTML structures the web: from essential elements and semantics to advanced form validation, accessibility, and modern native APIs.
       </p>
+
+      <!-- Mobile Table of Contents Button -->
+      <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tutorialOffcanvas" aria-controls="tutorialOffcanvas">
+        <i class="bi bi-list-nested me-1"></i> Table of Contents
+      </button>
     </div>
   </header>
 
-  <!-- Main Tutorial Content with Sidebar -->
+  <!-- Mobile Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="tutorialOffcanvas" aria-labelledby="tutorialOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="tutorialOffcanvasLabel"><i class="bi bi-book me-2"></i> Tutorial Modules</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="nav flex-column gap-1">
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod1">1. Fundamentals & Boilerplate</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod2">2. Text Formatting & Structure</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod3">3. Hyperlinks & Navigation</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod4">4. Media: Images, Audio, Video</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod5">5. Modern Forms & Validation</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod6">6. Tables & Tabular Data</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod7">7. HTML5 Semantics & Layout</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod8">8. Accessibility (a11y) & SEO</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod9">9. Modern HTML5 Native APIs</a>
+        <a class="docs-nav-link" data-bs-dismiss="offcanvas" href="#mod10">10. 7 Common Pitfalls to Avoid</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Tutorial Content with Desktop Sidebar -->
   <div class="container py-5">
     <div class="row g-4">
-      <!-- Sidebar Navigation -->
+      <!-- Desktop Sidebar -->
       <aside class="col-lg-3 d-none d-lg-block">
         <div class="docs-sidebar card custom-card p-3 shadow-sm">
           <h6 class="fw-bold text-uppercase text-secondary small mb-3">Tutorial Modules</h6>
           <nav class="nav flex-column gap-1">
-            <a class="docs-nav-link" href="#mod1">1. Fundamentals & Boilerplate</a>
+            <a class="docs-nav-link active" href="#mod1">1. Fundamentals & Boilerplate</a>
             <a class="docs-nav-link" href="#mod2">2. Text Formatting & Structure</a>
             <a class="docs-nav-link" href="#mod3">3. Hyperlinks & Navigation</a>
             <a class="docs-nav-link" href="#mod4">4. Media: Images, Audio, Video</a>
@@ -100,9 +127,12 @@
         
         <!-- Module 1 -->
         <section id="mod1" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">1. HTML Fundamentals & Document Anatomy</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">1. HTML Fundamentals & Document Anatomy</h2>
+            <a href="playground.html?tag=!DOCTYPE" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Boilerplate</a>
+          </div>
           <p>
-            <strong>HTML (HyperText Markup Language)</strong> is the foundational structural backbone of every webpage. HTML uses <em>tags</em> wrapped in angle brackets to instruct the browser how to present content.
+            <strong>HTML (HyperText Markup Language)</strong> is the foundational structural backbone of every webpage. HTML uses <em>tags</em> wrapped in angle brackets to instruct the browser how to parse and display content.
           </p>
 
           <h5 class="fw-bold mt-4">The Standard HTML5 Starter Skeleton:</h5>
@@ -142,7 +172,10 @@
 
         <!-- Module 2 -->
         <section id="mod2" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">2. Text Formatting & Structure</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">2. Text Formatting & Structure</h2>
+            <a href="playground.html?tag=p" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Text Elements</a>
+          </div>
           <p>
             HTML provides semantic tags for organizing human text into meaningful hierarchies:
           </p>
@@ -194,7 +227,10 @@
 
         <!-- Module 3 -->
         <section id="mod3" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">3. Hyperlinks & Navigation</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">3. Hyperlinks & Navigation</h2>
+            <a href="playground.html?tag=a" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Links</a>
+          </div>
           <p>
             The anchor tag <code>&lt;a&gt;</code> interconnects documents across the World Wide Web.
           </p>
@@ -226,7 +262,10 @@
 
         <!-- Module 4 -->
         <section id="mod4" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">4. Media: Images, Audio & Video</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">4. Media: Images, Audio & Video</h2>
+            <a href="playground.html?tag=video" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Media Players</a>
+          </div>
           <p>
             HTML5 provides native multimedia playback with zero third-party plugins:
           </p>
@@ -259,7 +298,10 @@
 
         <!-- Module 5 -->
         <section id="mod5" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">5. Modern Forms & Native Validation</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">5. Modern Forms & Native Validation</h2>
+            <a href="playground.html?tag=form" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Forms</a>
+          </div>
           <p>
             HTML5 forms include client-side validation without requiring custom JavaScript:
           </p>
@@ -294,7 +336,10 @@
 
         <!-- Module 6 -->
         <section id="mod6" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">6. Tables & Tabular Data</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">6. Tables & Tabular Data</h2>
+            <a href="playground.html?tag=table" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Tables</a>
+          </div>
           <p>
             Tables should strictly be used for tabular data (financial ledgers, schedule matrices, comparison charts).
           </p>
@@ -327,7 +372,10 @@
 
         <!-- Module 7 -->
         <section id="mod7" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">7. HTML5 Semantics & Page Architecture</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">7. HTML5 Semantics & Page Architecture</h2>
+            <a href="playground.html" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try Semantic Layout</a>
+          </div>
           <p>
             Build intuitive, screen-reader friendly page layouts using standard HTML5 landmarks:
           </p>
@@ -376,7 +424,10 @@
 
         <!-- Module 9 -->
         <section id="mod9" class="mb-5 pb-4 border-bottom">
-          <h2 class="fw-bold text-primary mb-3">9. Modern HTML5 Native APIs</h2>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold text-primary mb-0">9. Modern HTML5 Native APIs</h2>
+            <a href="playground.html?tag=dialog" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Try &lt;dialog&gt;</a>
+          </div>
           <p>
             HTML5 now includes built-in interactive components that previously required heavy JavaScript libraries:
           </p>

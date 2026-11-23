@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTMLVerse - Learn HTML5 from Scratch to Mastery | Interactive Guide & Tag Reference</title>
-  <meta name="description" content="Master HTML5 with our comprehensive interactive learning hub. Complete tag dictionary with 110+ tags, real-time code playground, semantic best practices, and quizzes.">
+  <title>HTMLVerse - Learn HTML5 from Scratch to Pro | Complete Tag Encyclopedia & Live Playground</title>
+  <meta name="description" content="Master HTML5 with an exhaustive tag dictionary, interactive live sandbox, structured tutorials, accessibility guides, and quizzes. Built with HTML, Bootstrap 5.3 & JS.">
   
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
         <span class="brand-gradient fs-4">HTMLVerse</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -50,7 +50,7 @@
         </ul>
 
         <div class="d-flex align-items-center gap-2">
-          <!-- Theme Toggle Button -->
+          <!-- Theme Toggle -->
           <button class="btn btn-outline-secondary border-0" id="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
           </button>
@@ -70,47 +70,116 @@
         ✨ Complete HTML5 Reference & Interactive Learning Suite
       </div>
       <h1 class="hero-title mb-3">
-        Master Modern HTML <br>
-        <span class="brand-gradient">From Scratch to Pro</span>
+        Learn HTML5 <br class="d-sm-none">
+        <span class="brand-gradient">From Scratch to Mastery</span>
       </h1>
       <p class="hero-subtitle mb-4">
-        Explore every HTML tag with in-depth descriptions, real-world syntax, live editable sandboxes, and web accessibility standards.
+        Explore every HTML tag with in-depth descriptions, live editable code sandboxes, accessibility guidelines, and self-paced quizzes.
       </p>
 
-      <!-- Search Trigger Input -->
+      <!-- Search Input with Keyboard Shortcut Hint -->
       <div class="row justify-content-center mb-4">
         <div class="col-md-8 col-lg-6">
           <form action="tags.html" method="GET" class="input-group input-group-lg shadow-sm">
             <span class="input-group-text bg-body border-end-0">
               <i class="bi bi-search text-muted"></i>
             </span>
-            <input type="text" name="search" class="form-control border-start-0" placeholder="Search any tag: <video>, <dialog>, <form>, <table>..." aria-label="Search tags">
+            <input type="text" name="search" class="form-control border-start-0 border-end-0" placeholder="Search tags: <video>, <dialog>, <form>..." aria-label="Search tags">
+            <span class="input-group-text bg-body border-start-0 d-none d-sm-flex">
+              <kbd class="small text-muted bg-body-secondary border">Ctrl + K</kbd>
+            </span>
             <button class="btn btn-primary px-4 fw-semibold" type="submit">Search</button>
           </form>
         </div>
       </div>
 
       <!-- Quick Action Buttons -->
-      <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="d-flex flex-wrap justify-content-center gap-2 gap-sm-3 mb-5">
         <a href="tags.html" class="btn btn-primary btn-lg px-4 shadow-sm">
-          <i class="bi bi-journal-code me-2"></i> Browse 110+ Tags
+          <i class="bi bi-journal-code me-2"></i> Browse 115+ Tags
         </a>
         <a href="playground.html" class="btn btn-outline-primary btn-lg px-4">
           <i class="bi bi-terminal me-2"></i> Launch Playground
         </a>
         <a href="tutorial.html" class="btn btn-secondary btn-lg px-4">
-          <i class="bi bi-mortarboard me-2"></i> Start Step-by-Step Guide
+          <i class="bi bi-mortarboard me-2"></i> Full Curriculum
         </a>
       </div>
+
+      <!-- Stats Counter Banner -->
+      <div class="stats-banner p-3 p-md-4 mt-2 max-w-900 mx-auto">
+        <div class="row g-2 text-center">
+          <div class="col-4 stat-item border-end">
+            <div class="stat-number">115+</div>
+            <div class="small text-secondary fw-semibold">HTML Tags Cataloged</div>
+          </div>
+          <div class="col-4 stat-item border-end">
+            <div class="stat-number">10</div>
+            <div class="small text-secondary fw-semibold">Standard Categories</div>
+          </div>
+          <div class="col-4 stat-item">
+            <div class="stat-number">100%</div>
+            <div class="small text-secondary fw-semibold">Free & Responsive</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </header>
 
+  <!-- Live Mini Playground on Homepage -->
+  <section class="py-5 bg-body-secondary border-top border-bottom">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill mb-2 fw-semibold">Interactive Sandbox</span>
+        <h2 class="fw-bold">Try HTML Right Here, Live!</h2>
+        <p class="text-secondary small">Edit the HTML code below and watch the preview update immediately in real time.</p>
+      </div>
+
+      <div class="row g-3">
+        <!-- Editor Left -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm overflow-hidden h-100">
+            <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <span class="small font-monospace text-warning"><i class="bi bi-code-slash me-1"></i> HTML Code Editor</span>
+              <button class="btn btn-sm btn-outline-light py-0 px-2 small" onclick="resetHomeDemo()">Reset Demo</button>
+            </div>
+            <textarea id="home-demo-editor" class="code-textarea p-3" style="height: 320px;" spellcheck="false">&lt;div style="font-family: system-ui; text-align: center; padding: 2rem; background: linear-gradient(135deg, #2563eb, #7c3aed); color: white; border-radius: 12px;"&gt;
+  &lt;h2&gt;Hello, Web Developer! 🚀&lt;/h2&gt;
+  &lt;p&gt;You can edit this HTML markup live.&lt;/p&gt;
+  &lt;button style="background: white; color: #2563eb; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer;" onclick="alert('HTML5 rocks!')"&gt;
+    Click Me!
+  &lt;/button&gt;
+&lt;/div&gt;</textarea>
+          </div>
+        </div>
+
+        <!-- Preview Right -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm overflow-hidden h-100 bg-white">
+            <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <span class="small font-monospace text-info"><i class="bi bi-eye me-1"></i> Real-Time Live Preview</span>
+              <span class="badge bg-success small">Instant Sync</span>
+            </div>
+            <iframe id="home-demo-preview" class="w-100 border-0" style="height: 320px;" sandbox="allow-scripts allow-modals"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="playground.html" class="btn btn-outline-primary btn-sm">
+          <i class="bi bi-arrows-fullscreen me-1"></i> Open Fullscreen Playground with Presets &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Key Learning Features -->
-  <section class="py-5 bg-body-tertiary">
+  <section class="py-5 bg-body">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Everything You Need to Master HTML</h2>
-        <p class="text-secondary">Designed for beginners taking their first steps and experienced developers needing a quick standard reference.</p>
+        <h2 class="fw-bold">Everything You Need to Master Modern HTML</h2>
+        <p class="text-secondary">Designed for beginners taking their first steps and seasoned engineers needing a fast desktop reference.</p>
       </div>
 
       <div class="row g-4">
@@ -146,7 +215,7 @@
             </div>
             <h5 class="fw-bold mb-2">Semantic & a11y Best Practices</h5>
             <p class="text-secondary small">Learn why semantic HTML matters for screen readers, web crawlers, and SEO optimization. Write clean, accessible code.</p>
-            <a href="tutorial.html#semantics" class="text-decoration-none fw-semibold mt-auto text-primary">Learn semantics &rarr;</a>
+            <a href="tutorial.html#mod7" class="text-decoration-none fw-semibold mt-auto text-primary">Learn semantics &rarr;</a>
           </div>
         </div>
 
@@ -180,8 +249,8 @@
             <div class="feature-icon-box">
               <i class="bi bi-shield-check"></i>
             </div>
-            <h5 class="fw-bold mb-2">Modern HTML5 Standard</h5>
-            <p class="text-secondary small">Up to date with current W3C / WHATWG living standards, including modern tags like &lt;dialog&gt;, &lt;search&gt;, &lt;picture&gt;, and &lt;details&gt;.</p>
+            <h5 class="fw-bold mb-2">Modern HTML5 Living Standard</h5>
+            <p class="text-secondary small">Up to date with current W3C / WHATWG standards, including modern tags like &lt;dialog&gt;, &lt;search&gt;, &lt;picture&gt;, and &lt;details&gt;.</p>
             <a href="tags.html" class="text-decoration-none fw-semibold mt-auto text-primary">Explore standards &rarr;</a>
           </div>
         </div>
@@ -189,15 +258,15 @@
     </div>
   </section>
 
-  <!-- Popular HTML Tags Showcase -->
-  <section class="py-5">
+  <!-- Popular Tags Showcase -->
+  <section class="py-5 bg-body-tertiary">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
         <div>
           <h2 class="fw-bold mb-1">Essential Building Blocks</h2>
           <p class="text-secondary mb-0">Jump straight into the most frequently used HTML elements in web development.</p>
         </div>
-        <a href="tags.html" class="btn btn-outline-primary">View All 110+ Tags &rarr;</a>
+        <a href="tags.html" class="btn btn-outline-primary">View All 115+ Tags &rarr;</a>
       </div>
 
       <div class="row g-3">
@@ -253,7 +322,7 @@
   </section>
 
   <!-- Interactive Semantic HTML Comparison -->
-  <section class="py-5 bg-body-tertiary">
+  <section class="py-5 bg-body">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-5">
@@ -276,7 +345,7 @@
               <span><strong>Maintainability:</strong> Clean markup reduces development and maintenance overhead.</span>
             </li>
           </ul>
-          <a href="tutorial.html#semantics" class="btn btn-primary mt-2">Read Semantic Guide</a>
+          <a href="tutorial.html#mod7" class="btn btn-primary mt-2">Read Semantic Guide</a>
         </div>
 
         <div class="col-lg-7">
@@ -320,10 +389,10 @@
   </section>
 
   <!-- CTA Banner -->
-  <section class="py-5 text-center">
+  <section class="py-5 text-center bg-body-tertiary">
     <div class="container">
       <div class="card bg-primary text-white p-5 rounded-4 shadow" style="background: var(--primary-gradient) !important;">
-        <h2 class="fw-bold mb-3">Ready to Test Your HTML Knowledge?</h2>
+        <h2 class="fw-bold mb-3">Ready to Test Your HTML Skills?</h2>
         <p class="lead mb-4 mx-auto" style="max-width: 600px;">
           Take our interactive 10-question quiz to check your grasp of HTML5 syntax, void elements, semantics, and attributes.
         </p>
@@ -406,5 +475,32 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Global Scripts -->
   <script src="js/main.js"></script>
+
+  <!-- Live Mini Demo Handler for Home -->
+  <script>
+    const homeEditor = document.getElementById('home-demo-editor');
+    const homePreview = document.getElementById('home-demo-preview');
+    const defaultHomeDemo = homeEditor ? homeEditor.value : '';
+
+    function updateHomePreview() {
+      if (!homeEditor || !homePreview) return;
+      const doc = homePreview.contentDocument || homePreview.contentWindow.document;
+      doc.open();
+      doc.write(homeEditor.value);
+      doc.close();
+    }
+
+    function resetHomeDemo() {
+      if (homeEditor) {
+        homeEditor.value = defaultHomeDemo;
+        updateHomePreview();
+      }
+    }
+
+    if (homeEditor) {
+      homeEditor.addEventListener('input', updateHomePreview);
+      updateHomePreview();
+    }
+  </script>
 </body>
 </html>

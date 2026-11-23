@@ -23,7 +23,7 @@
         <span class="brand-gradient fs-4">HTMLVerse</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -62,15 +62,15 @@
   </nav>
 
   <!-- Playground Controls Bar -->
-  <div class="bg-body-tertiary border-bottom py-2">
+  <div class="bg-body-tertiary border-bottom py-2 shadow-sm">
     <div class="container-fluid px-lg-4">
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
         <!-- Preset Selector -->
         <div class="d-flex align-items-center gap-2">
           <label for="preset-select" class="small fw-bold text-secondary text-nowrap">
-            <i class="bi bi-magic me-1"></i> Templates:
+            <i class="bi bi-magic me-1"></i> Template:
           </label>
-          <select id="preset-select" class="form-select form-select-sm" style="width: 220px;">
+          <select id="preset-select" class="form-select form-select-sm" style="width: 210px;">
             <option value="starter">HTML5 Starter Boilerplate</option>
             <option value="semantics">Semantic Blog Layout</option>
             <option value="form">Accessible Contact Form</option>
@@ -116,12 +116,12 @@
       <div class="row g-3 h-100">
         <!-- Left: Code Editor -->
         <div class="col-lg-6">
-          <div class="playground-editor-wrapper d-flex flex-column h-100">
+          <div class="playground-editor-wrapper d-flex flex-column h-100 shadow-sm">
             <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center border-bottom border-secondary">
               <span class="small font-monospace text-warning">
                 <i class="bi bi-code-slash me-1"></i> HTML Editor
               </span>
-              <span class="badge bg-secondary font-monospace small">Live Sync</span>
+              <span class="badge bg-secondary font-monospace small" id="editor-stats">0 chars</span>
             </div>
             <textarea id="code-editor" class="code-textarea flex-grow-1" placeholder="Type or paste your HTML code here..." spellcheck="false"></textarea>
           </div>
@@ -134,7 +134,7 @@
               <span class="small font-monospace text-info">
                 <i class="bi bi-window me-1"></i> Sandboxed Output
               </span>
-              <span class="badge bg-success font-monospace small">Responsive Viewport</span>
+              <span class="badge bg-success font-monospace small">Live Rendering</span>
             </div>
             <div id="preview-viewport-wrapper" class="device-preview-wrapper device-desktop flex-grow-1 bg-white">
               <iframe id="preview-frame" class="preview-frame" sandbox="allow-scripts allow-modals allow-forms allow-same-origin" title="Live Preview Frame"></iframe>
@@ -158,5 +158,22 @@
   <script src="js/tags-data.js"></script>
   <script src="js/main.js"></script>
   <script src="js/playground.js"></script>
+
+  <!-- Realtime character & line counter -->
+  <script>
+    const editor = document.getElementById('code-editor');
+    const statsBadge = document.getElementById('editor-stats');
+    function updateStats() {
+      if (editor && statsBadge) {
+        const lines = editor.value.split('\n').length;
+        const chars = editor.value.length;
+        statsBadge.innerText = `${lines} lines, ${chars} chars`;
+      }
+    }
+    if (editor) {
+      editor.addEventListener('input', updateStats);
+      updateStats();
+    }
+  </script>
 </body>
 </html>
